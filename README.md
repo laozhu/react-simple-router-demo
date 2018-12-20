@@ -2,4 +2,4 @@
 
 > Simple hand-crafted react router demo without react-router.
 
-Created with [CodeSandbox](https://6vkymk1j73.codesandbox.io/)
+Created with [CodeSandbox](https://codesandbox.io/s/github/laozhu/react-simple-router-demo)
