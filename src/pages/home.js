@@ -1,12 +1,8 @@
-import React from "react";
+import React from 'react';
 
 class Home extends React.PureComponent {
   render() {
-    return (
-      <div style={{ backgroundColor: "blue", color: "white" }}>
-        This is Home Page.
-      </div>
-    );
+    return <div style={{ backgroundColor: 'blue', color: 'white' }}>This is Home Page.</div>;
   }
 }
 
