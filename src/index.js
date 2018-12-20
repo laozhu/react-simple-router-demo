@@ -5,9 +5,9 @@ import Layout from './layout';
 import Loading from './pages/loading';
 
 // Pages
-const Home = React.lazy(() => import('./pages/home'));
-const Blog = React.lazy(() => import('./pages/blog'));
-const About = React.lazy(() => import('./pages/about'));
+const Home = React.lazy(() => import('./pages/home' /* webpackChunkName: "home" */));
+const Blog = React.lazy(() => import('./pages/blog' /* webpackChunkName: "blog" */));
+const About = React.lazy(() => import('./pages/about' /* webpackChunkName: "about" */));
 
 // Routes
 const routes = [
