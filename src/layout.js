@@ -1,6 +1,6 @@
-import React from "react";
-import { history } from "./history";
-import styles from "./index.css";
+import React from 'react';
+import { history } from './history';
+import styles from './index.css';
 
 class Layout extends React.PureComponent {
   onClickHandler = (event, path) => {
@@ -17,12 +17,8 @@ class Layout extends React.PureComponent {
         <nav>
           <ul>
             {routes.map((r, i) => (
-              <li key={i} className={r.path === pathname ? "active" : ""}>
-                <a
-                  className="link"
-                  href={r.path}
-                  onClick={e => this.onClickHandler(e, r.path)}
-                >
+              <li key={i} className={r.path === pathname ? 'active' : ''}>
+                <a className="link" href={r.path} onClick={e => this.onClickHandler(e, r.path)}>
                   {r.name}
                 </a>
               </li>

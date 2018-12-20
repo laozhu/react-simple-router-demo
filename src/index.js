@@ -1,19 +1,19 @@
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
-import { history } from "./history";
-import Layout from "./layout";
-import Loading from "./pages/loading";
+import React, { Suspense } from 'react';
+import ReactDOM from 'react-dom';
+import { history } from './history';
+import Layout from './layout';
+import Loading from './pages/loading';
 
 // Pages
-const Home = React.lazy(() => import("./pages/home"));
-const Blog = React.lazy(() => import("./pages/blog"));
-const About = React.lazy(() => import("./pages/about"));
+const Home = React.lazy(() => import('./pages/home' /* webpackChunkName: "home" */));
+const Blog = React.lazy(() => import('./pages/blog' /* webpackChunkName: "blog" */));
+const About = React.lazy(() => import('./pages/about' /* webpackChunkName: "about" */));
 
 // Routes
 const routes = [
-  { name: "Home", path: "/", component: Home },
-  { name: "Blog", path: "/blog", component: Blog },
-  { name: "About", path: "/about", component: About }
+  { name: 'Home', path: '/', component: Home },
+  { name: 'Blog', path: '/blog', component: Blog },
+  { name: 'About', path: '/about', component: About },
 ];
 
 // Simple Router
@@ -33,7 +33,7 @@ const App = () => (
   </Layout>
 );
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 const render = app => ReactDOM.render(app, rootElement);
 render(<App />);
 history.listen(location => render(<App />));
